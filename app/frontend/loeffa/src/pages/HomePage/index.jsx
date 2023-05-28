@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Cards from '../../components/Cards';
+import Header from '../../components/Header';
 
 function HomePage() {
   const [rooms, setRooms] = useState([]);
@@ -16,6 +17,7 @@ function HomePage() {
 
   return (
     <div>
+      <Header />
       <Cards rooms={rooms} />
     </div>
   );
