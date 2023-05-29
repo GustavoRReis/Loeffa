@@ -10,3 +10,4 @@ class Booking(models.Model):
     workstation = models.ForeignKey(Workstation, on_delete=models.CASCADE)
     entry_date = models.DateTimeField(auto_now_add=True)
     departure_date = models.DateTimeField(auto_now=True)
+    name_user = models.CharField(max_length=50, default="")
