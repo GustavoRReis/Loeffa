@@ -24,7 +24,7 @@ function Book() {
 
   useEffect(() => {
     apiFetch();
-  }, [rooms]);
+  }, [postRoom]);
 
   const cancelar = () => {
     setDisponivel(false);

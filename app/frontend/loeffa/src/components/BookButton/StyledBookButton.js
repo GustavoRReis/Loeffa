@@ -2,9 +2,12 @@ import styled from 'styled-components';
 
 const StyledBookButton = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 32px;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 999;
+  
 
   & > div {
     background-color: #fff;

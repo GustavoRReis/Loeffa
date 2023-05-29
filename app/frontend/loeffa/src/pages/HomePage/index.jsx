@@ -23,7 +23,7 @@ function HomePage() {
 
   const buttonClick = (e) => {
     e.preventDefault();
-    navigate('/reservas');
+    navigate('/booking');
   };
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo_techhub.png';
 import StyledHeader from './StyledHeader';
 
@@ -10,10 +10,13 @@ function Header() {
           <img src={logo} alt="img-logo" />
         </div>
         <div className="div-ul-container">
-          <ul className='ul-container'>
-            <li>Inicio</li>
-            <li>Salas</li>
-            <li>Reservas</li>
+          <ul className="ul-container">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/reservations">Reservas</Link>
+            </li>
           </ul>
         </div>
       </header>
