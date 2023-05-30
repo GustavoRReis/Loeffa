@@ -14,10 +14,14 @@ const StyledReservations = styled.div`
     align-items: center;
   }
 
-  form {
+  & form {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
+  }
+
+  & .overlay button {
+    margin: 8px;
   }
 `;
 

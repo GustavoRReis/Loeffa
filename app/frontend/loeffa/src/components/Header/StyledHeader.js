@@ -4,7 +4,7 @@ const StyledHeader = styled.header`
   .header-container {
     background-color: #1a1b1c;
     display: flex;
-    height: 200px;
+    height: 150px;
   }
 
   .div-img-container {
@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
   }
 
   .div-img-container img {
-    width: 350px;
+    width: 250px;
   }
 
   .div-ul-container {

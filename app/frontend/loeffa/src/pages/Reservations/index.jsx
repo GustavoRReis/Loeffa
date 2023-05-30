@@ -4,11 +4,12 @@ import Header from '../../components/Header';
 import Cards from '../../components/Cards';
 import { Button } from '@material-ui/core';
 import StyledReservations from './StyledReservations';
+import Swal from 'sweetalert2';
 
 function Reservations() {
   const [rooms, setRooms] = useState([]);
-  const [teste, setTeste] = useState(false);
-  const [disponivel, setDisponivel] = useState(false);
+  const [verifyButton, setVerifyButton] = useState(false);
+  const [available, setAvailable] = useState(false);
   const [postRoom, setPostRoom] = useState({
     workstation: {
       name: '',
@@ -27,11 +28,11 @@ function Reservations() {
 
   useEffect(() => {
     apiFetch();
-    setTeste(true);
+    setVerifyButton(true);
   }, [postRoom]);
 
 
-  const enviarReserva = async () => {
+  const sendBooking = async () => {
     try {
       const { name } = postRoom.workstation;
       const workstation = rooms.find((room) => room.workstation.name === name);
@@ -46,17 +47,18 @@ function Reservations() {
         },
         name_user: '',
       });
-      setDisponivel(false);
+      setAvailable(false);
+      clickModal();
     } catch (error) {
       console.log('Erro ao enviar a reserva:', error.response.data);
     }
   };
 
-  const cancelar = () => {
-    setDisponivel(false);
+  const cancel = () => {
+    setAvailable(false);
   };
 
-  const reservar = ({ target }) => {
+  const isDataReservation = ({ target }) => {
     setPostRoom((prevPostRoom) => ({
       ...prevPostRoom,
       workstation: {
@@ -64,27 +66,36 @@ function Reservations() {
         name: target.name,
       },
     }));
-    setDisponivel(true);
+    setAvailable(true);
   };
+
+  const clickModal = () => {
+    Swal.fire('Reserva cancelada!', 'Sua reserva foi cancelada com sucesso!', 'success');
+  }
+
 
   return (
     <StyledReservations>
       <div>
         <Header />
         {rooms.length > 0 && (
-          <Cards rooms={rooms} teste={teste} reservar={reservar} />
+          <Cards
+            rooms={rooms}
+            verifyButton={verifyButton}
+            isDataReservation={isDataReservation}
+          />
         )}
-        {disponivel && (
+        {available && (
           <div className="overlay">
             <form>
               <Button
-                onClick={enviarReserva}
+                onClick={sendBooking}
                 variant="contained"
                 color="primary"
               >
                 Cancelar Reserva
               </Button>
-              <Button onClick={cancelar} variant="contained" color="secondary">
+              <Button onClick={cancel} variant="contained" color="secondary">
                 Voltar
               </Button>
             </form>

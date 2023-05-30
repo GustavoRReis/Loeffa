@@ -1,5 +1,6 @@
 import StyledBookButton from './StyledBookButton';
 import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
 
 function BookButton({ buttonClick }) {
   return (
@@ -12,5 +13,9 @@ function BookButton({ buttonClick }) {
     </StyledBookButton>
   );
 }
+
+BookButton.propTypes = {
+  buttonClick: PropTypes.func.isRequired,
+};
 
 export default BookButton;

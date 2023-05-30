@@ -14,10 +14,14 @@ const StyledBook = styled.div`
     align-items: center;
   }
 
-  form {
+  & form {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
+  }
+
+  & .button-overlay {
+    margin: 12px;
   }
 `;
 
