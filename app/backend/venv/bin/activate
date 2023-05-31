@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/gustavo/Documentos/PROJETO LOEFFA/venv"
+VIRTUAL_ENV="/home/gustavo/Documentos/PASTA DE TESTE DE PROJETOS/Loeffa/app/backend/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

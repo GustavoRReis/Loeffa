@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/gustavo/Documentos/PROJETO LOEFFA/venv/bin/python3" "$0" "$@"
+'''exec' "/home/gustavo/Documentos/PASTA DE TESTE DE PROJETOS/Loeffa/app/backend/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
