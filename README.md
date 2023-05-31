@@ -69,20 +69,18 @@ As dependências utilizadas no frontend do projeto são:
  `cd backend`
 
 ## Passo 3:
-- Com o projeto em sua máquina local, crie um ambiente virtual para gerenciar as dependências do projeto.
-- `python3 -m venv venv`
-- Acesse com o comando:
+- Com o projeto em sua máquina local, acesse o ambiente virtual para gerenciar as dependências do projeto.
 - `source venv/bin/activate`
 ## Passo 4:
 - Instale dentro do ambiente virtual as seguintes dependências.
 - `pip install -r requirements.txt`
  
 - Após a instalação você deve criar um arquivo .env na raiz do projeto com os seguintes dados dentro do arquivo:
-- SECRET_KEY = "django-insecure-m5_(i3y=5$0jkn$rbqh37(2gvvpbnj%km^--)1s)qvleqr=^x8`
+- SECRET_KEY = "django-insecure-m5_(i3y=5$0jkn$rbqh37(2gvvpbnj%km^--)1s)qvleqr=^x8
 - É de suma importância que o arquivo .env tenha exatamente esse conteudo.
 ## Passo 5:
 - Execute o comando para subir o projeto:
-- `python manage.py runserver`
+- `python3 manage.py runserver`
 
 ## Passo 6:
 - Abra um novo terminal na pasta loeffa em front end e execute os seguintes comandos
