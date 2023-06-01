@@ -12,6 +12,7 @@ Este é um protótipo de um sistema de reservas de salas para a empresa fictíci
  
  ## Frontend
  - Node.js 12 ou superior
+ - React
 
 # Tecnologias Utilizadas
 
